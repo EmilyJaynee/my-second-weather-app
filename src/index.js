@@ -1,8 +1,23 @@
+function updateTemp(responce) {
+  console.log(responce.data.temperature.current);
+  let liveTemperature = document.querySelector("#current-temp");
+  let temperature = responce.data.temperature.current;
+  liveTemperature.innerHTML = Math.round(temperature);
+}
+
+function retrieveInfo(city) {
+  let apiKey = "19884f8731abea4oebtff3a019e58351";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(updateTemp);
+}
+
 function searchCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#search");
   let cityName = document.querySelector("#cityName");
   cityName.innerHTML = `${cityInput.value}`;
+  retrieveInfo(cityInput.value);
 }
 
 let search = document.querySelector("#current-city-forms");
