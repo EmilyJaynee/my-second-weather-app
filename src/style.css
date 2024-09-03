@@ -53,10 +53,16 @@ body {
 }
 .head-info {
   font-size: 35px;
-  margin: 15px auto auto 80px;
+  margin: auto auto auto 80px;
 }
 .time-date-weather {
   color: #696969;
+}
+.time {
+  margin: 25px auto 43.575px auto;
+}
+.current-temp {
+  margin: 43.575px auto 0px auto;
 }
 .main-info {
   text-align: center;
