@@ -1,11 +1,14 @@
 function updateTemp(responce) {
-  console.log(responce.data.temperature.current);
+  let cityName = document.querySelector("#cityName");
+  let countryName = document.querySelector("#country");
   let liveTemperature = document.querySelector("#current-temp");
   let temperature = responce.data.temperature.current;
-  let cityName = document.querySelector("#cityName");
+  let weatherCondions = document.querySelector("#condiontons");
 
   cityName.innerHTML = responce.data.city;
+  countryName.innerHTML = responce.data.country;
   liveTemperature.innerHTML = Math.round(temperature);
+  weatherCondions.innerHTML = responce.data.condition.description;
 }
 
 function retrieveInfo(city) {
