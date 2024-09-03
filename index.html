@@ -21,9 +21,10 @@
       <h1 class="current-temp"><b>30 °C</b></h1>
     </header>
     <main class="main-info">
-      <form>
+      <form id="current-city-forms">
         <input
           class="search-form"
+          id="search"
           type="search"
           placeholder="Where too?"
           required />
@@ -31,7 +32,7 @@
       </form>
 
       <h1>
-        <span class="city">Brighton</span>
+        <span class="city" id="city">Brighton</span>
         United Kingdon
       </h1>
     </main>
@@ -49,5 +50,6 @@
         ><span class="links">Nelify</span></a
       >
     </footer>
+    <script src="src/index.js"></script>
   </body>
 </html>
