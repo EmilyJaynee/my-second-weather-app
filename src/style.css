@@ -51,3 +51,23 @@ body {
   font-weight: 700;
   font-style: italic;
 }
+.head-info {
+  font-size: 30px;
+  margin: 20px auto auto 20px;
+}
+.time-date-weather {
+  color: #696969;
+}
+.main-info {
+  text-align: center;
+}
+
+.city {
+  color: #696969;
+}
+.foot-info {
+  text-align: center;
+}
+.links {
+  color: #696969;
+}
