@@ -61,7 +61,27 @@ body {
 .main-info {
   text-align: center;
 }
-
+.search-form,
+.submit-button-form {
+  background: #fff;
+  border: 0;
+  border-radius: 5%;
+  color: #696969;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.search-form {
+  width: 20%;
+}
+.submit-button-form {
+  width: 10%;
+}
+.submit-button-form:hover {
+  cursor: pointer;
+}
 .city {
   color: #696969;
 }
