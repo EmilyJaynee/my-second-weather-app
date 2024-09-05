@@ -5,7 +5,7 @@ function updateTemp(responce) {
   let temperature = responce.data.temperature.current;
   let weatherCondions = document.querySelector("#condiontons");
   let time = document.querySelector("#currentTime");
-
+  let liveDate = document.querySelector("#currentDate");
   let date = new Date(responce.data.time * 1000);
 
   cityName.innerHTML = responce.data.city;
@@ -13,6 +13,7 @@ function updateTemp(responce) {
   liveTemperature.innerHTML = Math.round(temperature);
   weatherCondions.innerHTML = responce.data.condition.description;
   time.innerHTML = formatTime(date);
+  liveDate.innerHTML = formateDate(date);
 }
 function formatTime(date) {
   let amPm = {
@@ -22,6 +23,27 @@ function formatTime(date) {
   };
 
   return date.toLocaleTimeString("en-US", amPm);
+}
+function formateDate(date) {
+  let months = [
+    "January",
+    "Febuary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+  let day = date.getDate();
+  let year = date.getFullYear();
+
+  return `${day} ${month} ${year}`;
 }
 function retrieveInfo(city) {
   let apiKey = "19884f8731abea4oebtff3a019e58351";
