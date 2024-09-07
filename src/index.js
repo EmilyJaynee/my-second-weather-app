@@ -1,6 +1,7 @@
 function updateTemp(responce) {
   let cityName = document.querySelector("#cityName");
   let countryName = document.querySelector("#country");
+  let weatherIcon = document.querySelector("#icon");
   let liveTemperature = document.querySelector("#current-temp");
   let temperature = responce.data.temperature.current;
   let weatherCondions = document.querySelector("#condiontons");
@@ -10,6 +11,7 @@ function updateTemp(responce) {
 
   cityName.innerHTML = responce.data.city;
   countryName.innerHTML = responce.data.country;
+  weatherIcon.innerHTML = `<img src="${responce.data.condition.icon_url}" />`;
   liveTemperature.innerHTML = Math.round(temperature);
   weatherCondions.innerHTML = responce.data.condition.description;
   time.innerHTML = formatTime(date);
@@ -21,7 +23,6 @@ function formatTime(date) {
     minute: "numeric",
     hour12: true,
   };
-
   return date.toLocaleTimeString("en-US", amPm);
 }
 function formateDate(date) {
@@ -42,7 +43,6 @@ function formateDate(date) {
   let month = months[date.getMonth()];
   let day = date.getDate();
   let year = date.getFullYear();
-
   return `${day} ${month} ${year}`;
 }
 function retrieveInfo(city) {
