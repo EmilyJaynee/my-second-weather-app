@@ -57,11 +57,14 @@ body {
   font-size: 35px;
   margin: auto auto auto 80px;
 }
-.time-date-weather {
-  color: #696969;
+.time-date {
+  color: #fff;
 }
 .time {
   margin: 25px auto 43.575px auto;
+}
+.condiontons {
+  color: #696969;
 }
 .current-temp {
   margin: 85px auto 0px auto;
