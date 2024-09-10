@@ -64,8 +64,9 @@ body {
   margin: 25px auto 43.575px auto;
 }
 .current-temp {
-  margin: 43.575px auto 0px auto;
-  color: #4bacbd;
+  margin: 85px auto 0px auto;
+  color: #696969;
+  text-shadow: 30px;
 }
 .main-info {
   text-align: center;
