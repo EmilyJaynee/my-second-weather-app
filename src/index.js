@@ -57,16 +57,16 @@ function searchCity(event) {
   let cityInput = document.querySelector("#search");
   retrieveInfo(cityInput.value);
 }
+function weatherPredictions() {
+  let day = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
+  let forcastInnerHtml = "";
 
-let search = document.querySelector("#current-city-forms");
-search.addEventListener("submit", searchCity);
-
-retrieveInfo("Brighton");
-
-let forcast = document.querySelector("#forcast");
-forcast.innerHTML = `
+  day.forEach(function (day) {
+    forcastInnerHtml =
+      forcastInnerHtml +
+      `
         <div class="forcast-day">
-          <div class="forcast-date">Tue</div>
+          <div class="forcast-date">${day}</div>
           <div class="forcast-icon">🌞</div>
           <div class="forcast-temp">
             <span class="forcast-low-temp">20°C</span>
@@ -74,3 +74,13 @@ forcast.innerHTML = `
             </div>
           </div>
 `;
+  });
+  let forcast = document.querySelector("#forcast");
+  forcast.innerHTML = forcastInnerHtml;
+}
+let search = document.querySelector("#current-city-forms");
+search.addEventListener("submit", searchCity);
+
+retrieveInfo("Brighton");
+
+weatherPredictions();
