@@ -52,6 +52,8 @@ body {
   font-style: italic;
 }
 .head-info {
+  display: flex;
+  justify-content: space-between;
   font-size: 35px;
   margin: auto auto auto 80px;
 }
@@ -63,9 +65,26 @@ body {
 }
 .current-temp {
   margin: 43.575px auto 0px auto;
+  color: #4bacbd;
 }
 .main-info {
   text-align: center;
+}
+.forcast {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.forcast-date {
+  margin: 10px;
+}
+.forcast-icon {
+  margin: 10px;
+}
+.forcast-temp {
+  margin: 10px;
 }
 .search-form,
 .submit-button-form {
