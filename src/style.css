@@ -61,7 +61,7 @@ body {
   color: #fff;
 }
 .time {
-  margin: 25px auto 43.575px auto;
+  margin: 25px auto 30px auto;
 }
 .condiontons {
   color: #696969;
@@ -77,20 +77,21 @@ body {
 .forcast {
   display: flex;
   justify-content: space-around;
-  margin: 20px;
+  margin: 15px;
 }
 
 .forcast-date {
-  margin: 10px;
-  font-size: 20px;
+  margin: 8px;
+  font-size: 15px;
+  font-weight: bold;
 }
 .forcast-icon {
-  margin: 10px;
-  font-size: 30px;
+  margin: 8px;
+  font-size: 20px;
 }
 .forcast-temp {
-  margin: 10px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 15px;
 }
 .forcast-low-temp {
   color: #696969;
