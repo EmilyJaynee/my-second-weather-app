@@ -62,3 +62,15 @@ let search = document.querySelector("#current-city-forms");
 search.addEventListener("submit", searchCity);
 
 retrieveInfo("Brighton");
+
+let forcast = document.querySelector("#forcast");
+forcast.innerHTML = `
+        <div class="forcast-day">
+          <div class="forcast-date">Tue</div>
+          <div class="forcast-icon">🌞</div>
+          <div class="forcast-temp">
+            <span class="forcast-low-temp">20°C</span>
+            <span class="forcast-high-temp">25°C</span>
+            </div>
+          </div>
+`;
