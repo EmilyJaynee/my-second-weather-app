@@ -76,7 +76,7 @@ function weatherPredictions(responce) {
       `
         <div class="forcast-day">
           <div class="forcast-date">${day}</div>
-          <div class="forcast-icon"> <img src="${day.condition.icon_url}"</div>
+          <img src="${day.condition.icon_url}" class="forcast-icon"
           <div class="forcast-temp">
           <span class="forcast-high-temp">${Math.round(
             day.temperature.maximum
