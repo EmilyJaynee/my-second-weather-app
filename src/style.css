@@ -93,12 +93,12 @@ body {
   margin: 5px;
   font-size: 15px;
 }
-.forcast-low-temp {
+.forcast-high-temp {
   color: #696969;
   font-weight: bold;
   margin: 5px;
 }
-.forcast-high-temp {
+.forcast-low-temp {
   margin: 5px;
 }
 .search-form,
