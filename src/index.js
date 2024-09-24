@@ -65,9 +65,14 @@ function weatherForcast(city) {
   console.log(apiURL);
   axios(apiURL).then(weatherPredictions);
 }
+function formateDays(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
 function weatherPredictions(responce) {
   console.log(responce.data);
-  //let days = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
   let forcastInnerHtml = "";
 
   responce.data.daily.forEach(function (day, index) {
@@ -76,7 +81,7 @@ function weatherPredictions(responce) {
         forcastInnerHtml +
         `
         <div class="forcast-day">
-          <div class="forcast-date">${day}</div>
+          <div class="forcast-date">${formateDays(day.time)}</div>
           <img src="${day.condition.icon_url}" class="forcast-icon"
           <div class="forcast-temp">
           <span class="forcast-high-temp">${Math.round(
