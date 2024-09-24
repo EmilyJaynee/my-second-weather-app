@@ -70,10 +70,11 @@ function weatherPredictions(responce) {
   //let days = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
   let forcastInnerHtml = "";
 
-  responce.data.daily.forEach(function (day) {
-    forcastInnerHtml =
-      forcastInnerHtml +
-      `
+  responce.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forcastInnerHtml =
+        forcastInnerHtml +
+        `
         <div class="forcast-day">
           <div class="forcast-date">${day}</div>
           <img src="${day.condition.icon_url}" class="forcast-icon"
@@ -87,6 +88,7 @@ function weatherPredictions(responce) {
             </div>
           </div>
 `;
+    }
   });
   let forcast = document.querySelector("#forcast");
   forcast.innerHTML = forcastInnerHtml;
