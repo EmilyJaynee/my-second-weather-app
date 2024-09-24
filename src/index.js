@@ -78,8 +78,12 @@ function weatherPredictions(responce) {
           <div class="forcast-date">${day}</div>
           <div class="forcast-icon"> <img src="${day.condition.icon_url}"</div>
           <div class="forcast-temp">
-          <span class="forcast-high-temp">${day.temperature.maximum}°C</span>
-            <span class="forcast-low-temp">${day.temperature.minimum}°C</span>
+          <span class="forcast-high-temp">${Math.round(
+            day.temperature.maximum
+          )}°C</span>
+            <span class="forcast-low-temp">${Math.round(
+              day.temperature.minimum
+            )}°C</span>
             </div>
           </div>
 `;
