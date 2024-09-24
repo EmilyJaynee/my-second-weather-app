@@ -61,16 +61,16 @@ function searchCity(event) {
 }
 function weatherForcast(city) {
   let apiKey = "19884f8731abea4oebtff3a019e58351";
-  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query={city}&key=${apiKey}`;
+  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
   console.log(apiURL);
   axios(apiURL).then(weatherPredictions);
 }
 function weatherPredictions(responce) {
   console.log(responce.data);
-  let days = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
+  //let days = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
   let forcastInnerHtml = "";
 
-  days.forEach(function (day) {
+  responce.data.daily.forEach(function (day) {
     forcastInnerHtml =
       forcastInnerHtml +
       `
@@ -78,8 +78,8 @@ function weatherPredictions(responce) {
           <div class="forcast-date">${day}</div>
           <div class="forcast-icon">🌞</div>
           <div class="forcast-temp">
+            <span class="forcast-high-temp">${day.temperature.maximum}</span>
             <span class="forcast-low-temp">20°C</span>
-            <span class="forcast-high-temp">25°C</span>
             </div>
           </div>
 `;
