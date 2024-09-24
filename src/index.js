@@ -76,10 +76,10 @@ function weatherPredictions(responce) {
       `
         <div class="forcast-day">
           <div class="forcast-date">${day}</div>
-          <div class="forcast-icon">🌞</div>
+          <div class="forcast-icon"> <img src="${day.condition.icon_url}"</div>
           <div class="forcast-temp">
-            <span class="forcast-high-temp">${day.temperature.maximum}</span>
-            <span class="forcast-low-temp">20°C</span>
+          <span class="forcast-high-temp">${day.temperature.maximum}°C</span>
+            <span class="forcast-low-temp">${day.temperature.minimum}°C</span>
             </div>
           </div>
 `;
